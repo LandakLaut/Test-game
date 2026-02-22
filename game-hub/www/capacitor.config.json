@@ -1,0 +1,6 @@
+{
+  "appId": "com.gabut.arcadehub",
+  "appName": "Arcade Hub",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

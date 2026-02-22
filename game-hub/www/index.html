@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arcade Hub PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Lobi Aplikasi -->
+    <main id="lobby" class="screen active">
+        <header class="lobby-header">
+            <h1>🎮 Arcade Hub</h1>
+            <p>Pilih game dan mulai bermain!</p>
+        </header>
+
+        <div class="game-grid">
+            <!-- Game Card 1 -->
+            <button class="game-card" data-game="tictactoe">
+                <div class="icon">❌⭕</div>
+                <h2>Tic-Tac-Toe</h2>
+                <p>Adu taktik melawan temanmu.</p>
+            </button>
+
+            <!-- Game Card 2 -->
+            <button class="game-card" data-game="rps">
+                <div class="icon">✊✌️✋</div>
+                <h2>Batu Gunting Kertas</h2>
+                <p>Lawan bot dan uji keberuntunganmu.</p>
+            </button>
+
+            <!-- Game Card 3 -->
+            <button class="game-card" data-game="snake">
+                <div class="icon">🐍</div>
+                <h2>Snake</h2>
+                <p>Makan apel dan tumbuh semakin panjang.</p>
+            </button>
+            <!-- Game Card 4 -->
+            <button class="game-card" data-game="flappy">
+                <div class="icon">🐦</div>
+                <h2>Flappy Bird</h2>
+                <p>Terbang setinggi mungkin melewati pipa.</p>
+            </button>
+        </div>
+    </main>
+
+    <!-- Container untuk Gameplay -->
+    <section id="game-container" class="screen hidden">
+        <header class="game-header">
+            <button id="btn-back" class="btn-glass">⬅ Kembali</button>
+            <h2 id="game-title">Nama Game</h2>
+        </header>
+        <div id="game-content">
+            <!-- Konten game akan dirender ke sini oleh JS -->
+        </div>
+    </section>
+
+    <script src="js/tictactoe.js"></script>
+    <script src="js/rps.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/flappy.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
